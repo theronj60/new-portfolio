@@ -1,11 +1,11 @@
 <script>
-/* import backGroundImg from '../assets/monument-valley-night.jpg' */
+import backGroundImg from '/imgs/monument-valley-night.jpg'
 import { defineComponent, reactive } from 'vue'
 
 export default defineComponent ({
 	name: 'Home',
 	setup() {
-		/* const bgImg = `background-image: url(${backGroundImg}); background-size: cover;` */
+		const bgImg = `background-image: url(${backGroundImg}); background-size: cover;`
 		const state = reactive({
 			list: [
 				'vite',
@@ -18,13 +18,13 @@ export default defineComponent ({
 				'jest'
 			]
 		})
-		return { state }
+		return { state, bgImg }
 	}
 })
 </script>
 
 <template>
-	<section id="home" ref="home" class="min-h-screen min-w-screen flex flex-col justify-center text-gray-100" :style="bgImg">
+	<section id="home" ref="home" class="min-h-screen min-w-screen flex flex-col justify-center snap-center text-gray-100" :style="bgImg">
 		<div class="h-1/3">
 		</div>
 		<div class="rounded-lg flex flex-col items-center justify-center h-1/3 w-3/4 mx-auto">
@@ -35,7 +35,7 @@ export default defineComponent ({
 				Web Developer
 			</span>
 			<div class="my-8 text-2xl hover:border-b-2 hover:border-blue-300">
-				<router-link to="/demos/table">Data Table Demo</router-link>
+				<a href="/demos/table" target="_blank">Data Table Demo</a>
 			</div>
 		</div>	
 		<div class="flex items-end justify-center h-1/3 pb-4">

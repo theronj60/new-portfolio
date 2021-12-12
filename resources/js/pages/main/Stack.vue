@@ -1,11 +1,11 @@
 <script>
 	import { defineComponent } from 'vue'
-	/* import stackBackImg from '../assets/antelope.jpeg' */
+	import stackBackImg from '/imgs/antelope.jpeg'
 	export default defineComponent({
 		setup() {
-			/* const bgImg = `background-image: url(${stackBackImg}); background-size: cover;` */
+			const bgImg = `background-image: url(${stackBackImg}); background-size: cover;`
 			const foo = 'bar'
-			return { foo }
+			return { foo, bgImg }
 		}
 	})
 </script>

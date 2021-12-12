@@ -1,5 +1,5 @@
 <script>
-/* import NavBar from '../components/NavBar.vue' */
+import Navbar from './components/Navbar.vue'
 import Home from './main/Home.vue'
 import About from './main/About.vue'
 import Stack from './main/Stack.vue'
@@ -7,7 +7,7 @@ import Stack from './main/Stack.vue'
 import { defineComponent } from 'vue'
 export default defineComponent ({
 	components: {
-		/* NavBar, */
+		Navbar,
 		Home,
 		About,
 		Stack
@@ -18,9 +18,9 @@ export default defineComponent ({
 
 <template>
 	<header>
-		<!-- <NavBar /> -->
+		<Navbar />
 	</header>
-	<main class="flex flex-col justify-center bg-gray-600">
+	<main class="flex flex-col justify-center snap-mandatory snap-y">
 		<Home />
 		<About />
 		<Stack />
