@@ -19,4 +19,5 @@ Route::get('/', function() {
 	return Inertia::render('Index');
 });
 
-Route::get('/demos', [EmployeeController::class, 'index']);
+Route::get('/demos/employees', [EmployeeController::class, 'index']);
+Route::get('/demos/employees/{$id}', [EmployeeController::class, 'show']);
