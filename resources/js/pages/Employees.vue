@@ -1,6 +1,6 @@
 <script>
 import { Link } from '@inertiajs/inertia-vue3'
-import { defineComponent, onMounted, reactive, ref, watch } from 'vue'
+import { defineComponent, reactive, ref } from 'vue'
 /* import _ from 'lodash' */
 
 	export default defineComponent({
@@ -38,7 +38,7 @@ import { defineComponent, onMounted, reactive, ref, watch } from 'vue'
 </script>
 
 <template>
-	<div class="min-w-full flex flex-col justify-center mb-8">
+	<div class="flex flex-col justify-center mb-8 mx-4">
 		<h1 class="text-2xl mx-4 mt-8">
 			<p class="hover:text-blue-400">joetwebdev API</p>
 			<p class="text-sm">Laravel Backend</p>
@@ -49,10 +49,7 @@ import { defineComponent, onMounted, reactive, ref, watch } from 'vue'
 			<tr>
 			  <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
 			  <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User Name</th>
-			  <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-			  <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
 			  <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Department</th>
-			  <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">City</th>
 			  <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">State</th>
 			</tr>
 		  </thead>
@@ -60,10 +57,7 @@ import { defineComponent, onMounted, reactive, ref, watch } from 'vue'
 			<tr v-for="employee in props.employees.data" :key="employee.id" class="cursor-pointer">
 			  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.id}}</td>
 			  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.user_name}}</td>
-			  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{`${employee.first_name} ${employee.last_name}`}}</td>
-			  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.email}}</td>
 			  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.department}}</td>
-			  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.city}}</td>
 			  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.state}}</td>
 			</tr>
 		  </tbody>

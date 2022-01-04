@@ -15,8 +15,8 @@ class EmployeeController extends Controller
 	 */
 	public function index()
 	{
-		return Inertia::render('Demos', [
-			'employees' => Employee::paginate(20)
+		return Inertia::render('Employees', [
+			'employees' => Employee::paginate(10)
 		]);
 	}
 
@@ -49,7 +49,9 @@ class EmployeeController extends Controller
 	 */
 	public function show(Employee $employee)
 	{
-		//
+		return Inertia::render('ShowEmployee', [
+			'employees' => Employee::where('id', $employee)->first()
+		]);
 	}
 
 	/**

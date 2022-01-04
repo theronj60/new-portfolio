@@ -35,7 +35,7 @@ export default defineComponent ({
 				Web Developer
 			</span>
 			<div class="my-8 text-2xl hover:border-b-2 hover:border-blue-300">
-				<a href="/demos/table" target="_blank">Data Table Demo</a>
+				<a href="/demos/employees" target="_blank">Data Table Demo</a>
 			</div>
 		</div>	
 		<div class="flex items-end justify-center h-1/3 pb-4">
