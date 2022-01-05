@@ -51,14 +51,16 @@ import { defineComponent, reactive, ref } from 'vue'
 			  <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User Name</th>
 			  <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Department</th>
 			  <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">State</th>
+			  <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Link</th>
 			</tr>
 		  </thead>
 		  <tbody class="bg-white divide-y divide-gray-200">
-			<tr v-for="employee in props.employees.data" :key="employee.id" class="cursor-pointer">
-			  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.id}}</td>
-			  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.user_name}}</td>
-			  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.department}}</td>
-			  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.state}}</td>
+			<tr v-for="employee in props.employees.data" :key="employee.id" class="align-middle">
+				  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.id}}</td>
+				  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.user_name}}</td>
+				  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.department}}</td>
+				  <td class="px-3 py-4 whitespace-nowrap text-sm text-gray-500">{{employee.state}}</td>
+				  <Link :href="'/demos/employees/' + employee.id"><button type="button" class="px-6 my-2 bg-green-400 py-2 rounded-lg">Visit</button></Link>
 			</tr>
 		  </tbody>
 		</table>

@@ -47,10 +47,10 @@ class EmployeeController extends Controller
 	 * @param  \App\Models\Employee  $employee
 	 * @return \Illuminate\Http\Response
 	 */
-	public function show(Employee $employee)
+	public function show($employee)
 	{
 		return Inertia::render('ShowEmployee', [
-			'employees' => Employee::where('id', $employee)->first()
+			'employee' => Employee::where('id', $employee)->first()
 		]);
 	}
 
