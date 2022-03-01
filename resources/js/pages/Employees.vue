@@ -40,7 +40,7 @@ import { defineComponent, reactive, ref } from 'vue'
 <template>
 	<div class="flex flex-col justify-center mb-8 mx-4">
 		<h1 class="text-2xl mx-4 mt-8">
-			<p class="hover:text-blue-400">joetwebdev API</p>
+			<p class="font-semibold">joetwebdev API</p>
 			<p class="text-sm">Laravel Backend</p>
 		</h1>
 
